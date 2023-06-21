@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: #230050;
+}
+
+nav {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  height: 3rem;
+  width: 100%;
+  background: linear-gradient(to bottom, black, transparent);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-container:nth-child(1) {
+  margin-left: 1rem;
+  justify-content: start;
+}
+
+.nav-container:nth-child(3) {
+  margin-right: 1rem;
+  justify-content: end;
+}
+
+.nav-contact-a {
+  background: linear-gradient(to top, rgba(124, 0, 124, 0.5), transparent, rgba(124, 0, 124, 0.5));
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 1.1rem;
+  color: white;
+  box-shadow: 0px 0px 15px 2px rgba(183, 60, 255, 0.3);
+}
+
+.nav-contact-a:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px 2px rgba(195, 91, 255, 0.7);
+
+}
+
+.nav-logo {
+  height: 3rem;
+  transition: 0.3s;
+}
+
+.nav-logo:hover {
+  transform: rotate(10deg);
+}
+
+.mobile-menu-btn-container {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.nav-links > a > img {
+  height: 1.5rem;
+  transition: 0.3s;
+}
+
+.nav-links:hover > a:not(:hover) > img {
+  transform: scale(0.8);
+  filter: blur(1px);
+}
+
+video {
+  opacity: 0.5;
+  width: 100%;
+  height: 26rem;
+  object-fit: cover;
+  position: absolute;
+  top: -10rem;
+  z-index: -2;
+  filter: hue-rotate(270deg);
+}
+
+.video-shadow {
+  width: 100%;
+  height: 16rem;
+  top: 0;
+  background: linear-gradient(transparent, #230050);
+  position: absolute;
+  z-index: -1;
+}
+
+main {
+  margin-top: 7rem;
+}
+
+.main-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.main-title > h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.main-title > h1 > strong {
+  color: blueviolet;
+}
+
+.main-title > p {
+  font-size: 1.3rem;
+  color: gray;
+  width: 70%;
+  line-height: 2rem;
+  text-align: center;
+  max-width: 800px;
+}
+
+.main-title > p > strong {
+  color: #00ff00;
+  font-weight: 400;
+}
+
+.portfolio {
+  background: linear-gradient(to bottom, transparent, #4c00af, transparent);
+}
+
+.portfolio-container {
+  display: flex;
+  margin: 5rem auto 0 auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 43rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-item {
+  border-radius: 0.3rem;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: pointer;
+  color: black;
+  border-color: white;
+}
+
+.portfolio-item > img {
+  height: 10rem;
+  width: 10rem;
+  filter: brightness(500%);
+}
+
+.portfolio-item:hover > img {
+  filter: brightness(0%);
+}
+
+.portfolio-item:hover {
+  transform: scale(1.1);
+}
+
+.about {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 7rem;
+}
+
+.about-title > h2, .contact-title > h2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 300;
+  gap: 0.5rem;
+  color: white;
+}
+
+.about-title > h2 > strong, .contact-title > h2 > strong {
+  color: blueviolet;
+}
+
+.about-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-p > p {
+  color: gray;
+  width: 70%;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  max-width: 1300px;
+}
+
+.contact-us {
+  background: linear-gradient(to bottom, transparent, #4c00af, transparent);
+  padding-bottom: 7rem;
+}
+
+.contact-flexbox {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  width: 20rem;
+  height: 25rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.6rem;
+  position: relative;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item > h3 {
+  margin-top: 5rem;
+  width: 90%;
+}
+
+.contact-item > p {
+  width: 90%;
+  color: rgb(59, 59, 59);
+}
+
+.contact-item > a {
+  position: absolute;
+  bottom: 2rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  width: 80%;
+  text-align: center;
+  padding: 0.5rem 0;
+  transition: 0.3s;
+}
+
+.contact-item:hover {
+  background-color: white;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+.contact-item:nth-child(1) > a {
+  border: 1px solid #2C2F33;
+  color: #2C2F33;
+}
+
+.contact-item:nth-child(1) > a:hover {
+  background-color: blue;
+  color: white;
+  border-color: blueviolet;
+  width: 90%;
+}
+
+.contact-item:nth-child(2) > a {
+  border: 1px solid #3e65cf;
+  color: #3e65cf;
+}
+
+.contact-item:nth-child(2) > a:hover {
+  background-color: green;
+  color: white;
+  border-color: darkgreen;
+  width: 90%;
+}
+
+.contact-item:nth-child(3) > a {
+  border: 1px solid #DC143C;
+  color: #DC143C;
+}
+
+.contact-item:nth-child(3) > a:hover {
+  background-color: purple;
+  color: white;
+  border-color: pink;
+  width: 90%;
+}
+
+
+.contact-item-top-decoration {
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.contact-item:nth-child(1) > .contact-item-top-decoration {
+  background-color: #2C2F33;
+}
+
+.contact-item:nth-child(2) > .contact-item-top-decoration {
+  background-color: #3e65cf;
+}
+
+.contact-item:nth-child(3) > .contact-item-top-decoration {
+  background-color: #DC143C;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+  background-color:#282d32;
+  padding-bottom: 2rem;
+}
+
+.footer-logo-container img {
+  width: 5rem;
+  transition: 0.3s;
+}
+
+.footer-logo-container img:hover {
+  transform: rotate(10deg);
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.footer-social-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social {
+  border: 1px solid white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4rem;
+  transition: 0.3s;
+}
+
+.footer-social > a > img {
+  width: 1rem;
+  height: 1rem;
+  margin: auto auto;
+}
+
+.footer-social > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social:hover {
+  transform: scale(1.2);
+  border-color: #00ff00;
+}
+
+.footer-slogan-container {
+  margin-top: 1rem;
+  font-size: 0.5rem;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  flex-direction: column;
+}
+
+.footer-slogan-container > p > a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width:720px) {
+  .portfolio-container {
+    width: 100%;
+  }
+  .portfolio-item {
+    width: 10rem;
+    height: 10rem;
+  }
+  .portfolio-item > img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .main-title > h1 {
+    font-size: 2.5rem;
+  }
+  .about-title > h2, .contact-title > h2 {
+    font-size: 2.3rem;
+  }
+  .main-title > p, .about-p > p {
+    width: 90%;
+  }
+  main {
+    margin-top: 3rem;
+  }
+  .contact-flexbox {
+    margin-top: 2rem;
+  }
+  .contact-item {
+    width: 17rem;
+    height: 23rem;
+  }
+}
+
+@media (max-width:550px) {
+  .main-title > h1 {
+    font-size: 2.2rem;
+  }
+  .about-title > h2, .contact-title > h2 {
+    font-size: 2.0rem;
+  }
+  .main-title > p, .about-p > p {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:360px) {
+  .main-title > h1 {
+    font-size: 2rem;
+  }
+  .about-title > h2, .contact-title > h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width:320px) {
+  .main-title > h1 {
+    font-size: 1.8rem;
+  }
+  .about-title > h2, .contact-title > h2 {
+    font-size: 1.8rem;
+  }
+}
