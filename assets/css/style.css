@@ -456,6 +456,9 @@ footer {
     width: 90%;
     font-size: 1rem;
   }
+  .nav-container:nth-child(2) > img {
+    display: none;
+  }
 }
 
 @media (max-width:360px) {
